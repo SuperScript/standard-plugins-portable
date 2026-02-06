@@ -183,7 +183,7 @@ Create a migration for: $ARGUMENTS
 
 **scripts/validate-migration.sh:**
 ```bash
-#!/bin/bash
+#!/usr/bin/env bash
 # Validate migration syntax
 npx prisma validate 2>&1 || echo "Validation failed"
 ```
