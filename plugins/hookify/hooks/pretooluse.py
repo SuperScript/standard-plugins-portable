@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.11
 """PreToolUse hook executor for hookify plugin.
 
 This script is called by Claude Code before any tool executes.

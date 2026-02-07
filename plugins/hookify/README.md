@@ -310,11 +310,11 @@ cc --plugin-dir /path/to/hookify
 5. Try `/hookify:list` to see if rule is loaded
 
 **Import errors:**
-- Ensure Python 3 is available: `python3 --version`
+- Ensure Python 3 is available: `python3.11 --version`
 - Check hookify plugin is installed
 
 **Pattern not matching:**
-- Test regex: `python3 -c "import re; print(re.search(r'pattern', 'text'))"`
+- Test regex: `python3.11 -c "import re; print(re.search(r'pattern', 'text'))"`
 - Use unquoted patterns in YAML to avoid escaping issues
 - Start simple, then add complexity
 

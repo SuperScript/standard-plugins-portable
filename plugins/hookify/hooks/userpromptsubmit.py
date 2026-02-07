@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.11
 """UserPromptSubmit hook executor for hookify plugin.
 
 This script is called by Claude Code when user submits a prompt.

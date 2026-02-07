@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.11
 """Stop hook executor for hookify plugin.
 
 This script is called by Claude Code when agent wants to stop.

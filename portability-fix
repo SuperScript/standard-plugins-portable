@@ -40,10 +40,19 @@ anthropic_official() {
   done
 }
 
+# Fix python3
+python_name() {
+  { rg -l 'python3' plugins || true; } | while read f
+  do
+    sed 's!python3 !python3.11 !;s!python3$!python3.11!' < "$f" > "$f.new" && mv "$f.new" "$f"
+  done
+}
+
 #### main
 
 bin_bash
 anthropic
 anthropic_email
 anthropic_official
+python_name
 

@@ -219,7 +219,7 @@ Use the current working directory (where Claude Code was started) as the base pa
 **If rule doesn't trigger after creation:**
 1. Verify file is in project `.claude/` not plugin `.claude/`
 2. Check file with Read tool to ensure pattern is correct
-3. Test pattern with: `python3 -c "import re; print(re.search(r'pattern', 'test text'))"`
+3. Test pattern with: `python3.11 -c "import re; print(re.search(r'pattern', 'test text'))"`
 4. Verify `enabled: true` in frontmatter
 5. Remember: Rules work immediately, no restart needed
 

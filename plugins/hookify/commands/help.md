@@ -145,11 +145,11 @@ Use Python regex syntax:
 - Check rule file is in `.claude/` directory
 - Verify `enabled: true` in frontmatter
 - Confirm pattern is valid regex
-- Test pattern: `python3 -c "import re; print(re.search('your_pattern', 'test_text'))"`
+- Test pattern: `python3.11 -c "import re; print(re.search('your_pattern', 'test_text'))"`
 - Rules take effect immediately - no restart needed
 
 **Import errors:**
-- Check Python 3 is available: `python3 --version`
+- Check Python 3 is available: `python3.11 --version`
 - Verify hookify plugin is installed correctly
 
 **Pattern not matching:**

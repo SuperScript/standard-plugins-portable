@@ -256,7 +256,7 @@ API_KEY\s*=      Matches: API_KEY=, API_KEY =
 Test regex patterns before using:
 
 ```bash
-python3 -c "import re; print(re.search(r'your_pattern', 'test text'))"
+python3.11 -c "import re; print(re.search(r'your_pattern', 'test text'))"
 ```
 
 Or use online regex testers (regex101.com with Python flavor).
