@@ -1,0 +1,49 @@
+#!/bin/sh
+
+# Fix /bin/bash
+bin_bash() {
+  { rg -l '/bin/bash' plugins external_plugins || true; } | while read f
+  do
+    sed 's!/bin/bash!/usr/bin/env bash!' < "$f" > "$f.new" && mv "$f.new" "$f"
+  done
+}
+
+# Fix /bin/bash
+bin_bash() {
+  { rg -l '/bin/bash' plugins external_plugins || true; } | while read f
+  do
+    sed 's!/bin/bash!/usr/bin/env bash!' < "$f" > "$f.new" && mv "$f.new" "$f"
+  done
+}
+
+# Fix "Anthropic"
+anthropic() {
+  { rg -l '"Anthropic"' .claude-plugin || true; } | while read f
+  do
+    sed 's!"Anthropic"!"SuperScript"!' < "$f" > "$f.new" && mv "$f.new" "$f"
+  done
+}
+
+# Fix "support@anthropic.com"
+anthropic_email() {
+  { rg -l '"support@anthropic.com"' .claude-plugin || true; } | while read f
+  do
+    sed 's!"support@anthropic.com"!"support@superscript.com"!' < "$f" > "$f.new" && mv "$f.new" "$f"
+  done
+}
+
+# Fix "anthropic-plugins-official"
+anthropic_official() {
+  { rg -l '"claude-plugins-official"' .claude-plugin || true; } | while read f
+  do
+    sed 's!"claude-plugins-official"!"standard-plugins-portable"!' < "$f" > "$f.new" && mv "$f.new" "$f"
+  done
+}
+
+#### main
+
+bin_bash
+anthropic
+anthropic_email
+anthropic_official
+
